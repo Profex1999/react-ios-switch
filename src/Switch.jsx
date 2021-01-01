@@ -5,7 +5,7 @@ import React from 'react';
 import normalizeColor from './normalizeColor';
 import prefixStyle from './prefixStyle';
 
-export default class Switch extends React.Component {
+class Switch extends React.Component {
   static propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
@@ -268,6 +268,7 @@ export default class Switch extends React.Component {
           })}
         />
         <input
+          ref={this.props.innerRef}
           checked={checked}
           disabled={disabled}
           name={name}
@@ -286,3 +287,5 @@ export default class Switch extends React.Component {
     this.ref = ref;
   }
 }
+
+export default React.forwardRef((props, ref) => <Switch innerRef={ref} {...props}/>)
