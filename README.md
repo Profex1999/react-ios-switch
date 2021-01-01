@@ -1,3 +1,6 @@
+This fork was made only for personal needs.  All credits to the original owner!
+
+
 react-ios-switch
 ===
 <img src="https://img.shields.io/npm/dm/react-ios-switch.svg">
